@@ -1,6 +1,10 @@
 # Frontend Developer Intern Assignment
 
-A scalable web application with authentication and dashboard functionality built with React.js and Node.js.
+🚀 A scalable web application with authentication and dashboard functionality built with React.js and Node.js.
+
+**Submitted by:** Purv Dabhi 
+**Email:** purvmdabhi@gmail.com  
+**Date:** September 30, 2025
 
 ## Project Structure
 ```
@@ -67,7 +71,7 @@ npm install
 # Start the backend server
 npm run dev
 ```
-Backend will run on http://localhost:5000
+Backend will run on http://localhost:5001
 
 ### 3. Frontend Setup
 ```bash
@@ -83,11 +87,12 @@ npm start
 Frontend will run on http://localhost:3000
 
 ### 4. Database Configuration
-Update `backend/.env` with your MongoDB connection string:
+The project is pre-configured with MongoDB Atlas. Check `backend/.env` for connection details:
 ```env
-MONGODB_URI=mongodb://localhost:27017/frontend-intern-db
-# or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frontend-intern-db
+PORT=5001
+MONGODB_URI=mongodb+srv://[configured]
+JWT_SECRET=[configured]
+NODE_ENV=development
 ```
 
 ## API Documentation
@@ -111,12 +116,25 @@ MONGODB_URI=mongodb://localhost:27017/frontend-intern-db
 - `status` - Filter by status (pending, in-progress, completed)
 - `priority` - Filter by priority (low, medium, high)
 
-## Testing with Postman
+## Testing
+
+### Automated Testing
+Run the included test script:
+```bash
+node generate_logs.js
+```
+
+### Manual Testing with Postman
 1. Import `postman_collection.json` into Postman
 2. Register a new user or login
 3. Copy the JWT token from the response
 4. Set the `token` variable in Postman environment
 5. Test all protected endpoints
+
+### Log Files
+Application generates comprehensive logs:
+- `backend_application.log` - Server and API logs
+- `test_logs.txt` - Automated API testing results
 
 ## Security Features
 - Password hashing with bcryptjs (12 rounds)
@@ -150,16 +168,51 @@ See [SCALING.md](./SCALING.md) for detailed production deployment and scaling st
 - bcryptjs for password hashing
 - express-validator for input validation
 
-## Development Notes
-- Code is structured for scalability and maintainability
-- TypeScript ensures type safety
-- Modular architecture with separation of concerns
-- Error boundaries and proper error handling
-- Responsive design for mobile and desktop
+## Assignment Compliance ✅
 
-## Future Enhancements
-- Real-time updates with WebSockets
-- File upload functionality
-- Email notifications
-- Advanced analytics dashboard
-- Mobile app with React Native
+**Frontend Requirements:**
+- ✅ React.js with TypeScript
+- ✅ Responsive design with TailwindCSS
+- ✅ Form validation (client + server)
+- ✅ Protected routes with authentication
+
+**Backend Requirements:**
+- ✅ Node.js/Express lightweight backend
+- ✅ JWT-based authentication APIs
+- ✅ Profile fetching/updating endpoints
+- ✅ CRUD operations on tasks entity
+- ✅ MongoDB database integration
+
+**Dashboard Features:**
+- ✅ User profile display
+- ✅ Task CRUD operations
+- ✅ Search and filter functionality
+- ✅ Secure logout flow
+
+**Security & Scalability:**
+- ✅ bcrypt password hashing
+- ✅ JWT authentication middleware
+- ✅ Comprehensive error handling
+- ✅ Modular code structure for scaling
+
+## Production Scaling Strategy
+
+**Frontend Scaling:**
+- CDN deployment for static assets
+- Code splitting and lazy loading
+- Service worker for offline functionality
+- Performance monitoring with Web Vitals
+
+**Backend Scaling:**
+- Horizontal scaling with load balancers
+- Database indexing and query optimization
+- Redis caching for session management
+- API rate limiting and throttling
+
+**Infrastructure:**
+- Docker containerization
+- Kubernetes orchestration
+- CI/CD pipeline automation
+- Monitoring with logging aggregation
+
+See [SCALING.md](./SCALING.md) for detailed implementation.
