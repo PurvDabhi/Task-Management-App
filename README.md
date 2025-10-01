@@ -1,4 +1,4 @@
-# Frontend Developer Intern Assignment
+# Task-Management-App
 
 🚀 A scalable web application with authentication and dashboard functionality built with React.js and Node.js.
 
