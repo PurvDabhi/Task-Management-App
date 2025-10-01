@@ -2,10 +2,6 @@
 
 🚀 A scalable web application with authentication and dashboard functionality built with React.js and Node.js.
 
-**Submitted by:** Purv Dabhi 
-**Email:** purvmdabhi@gmail.com  
-**Date:** September 30, 2025
-
 ## Project Structure
 ```
 frontend-intern-assignment/
@@ -214,5 +210,9 @@ See [SCALING.md](./SCALING.md) for detailed production deployment and scaling st
 - Kubernetes orchestration
 - CI/CD pipeline automation
 - Monitoring with logging aggregation
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 See [SCALING.md](./SCALING.md) for detailed implementation.
